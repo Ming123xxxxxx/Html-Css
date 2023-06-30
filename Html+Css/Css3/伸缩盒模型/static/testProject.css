@@ -1,0 +1,110 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.container{
+    width: 1200px;
+    margin: 50px auto;
+}
+
+.header{
+    width: 1200px;
+    height: 50px;
+    background-color:gray ;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    border: 2px solid black;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px 10px 0 0;
+}
+
+.header img{
+    width:70px;
+    vertical-align: middle;
+}
+
+.header .nav{
+    width: 450px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .nav span{
+    color: white;
+    display: inline-block;
+    border: 2px solid white;
+    line-height: 40px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px white;
+    transition: 0.2s 0s linear all;
+}
+
+.header .nav span:hover{
+    transform: scale(1.1);
+    background-color: rgb(92, 91, 89);
+}
+
+.container .content{
+    width: 100%;
+    height: 800px;
+    background-image: url('./back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.container .content .nav{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+}
+
+.container .content .nav div{
+    width: 150px;
+    height: 300px;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    line-height: 150px;
+    transition: 0.3s linear;
+}
+
+.container .content .nav div:hover{
+    box-shadow: 0px 0px 20px white;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.container .content .nav div:first-child{
+    background-color: #5e549e;
+}
+.container .content .nav div:nth-child(2){
+    background-color: #e0a149;
+}
+.container .content .nav div:nth-child(3){
+    background-color: #6aa6d6;
+}
+.container .content .nav div:nth-child(4){
+    background-color: #3b5c8a;
+}
+.container .content .nav div:last-child{
+    background-color: #78d443;
+}
+
+.container .content .nav i{
+    font-size: 50px;
+}

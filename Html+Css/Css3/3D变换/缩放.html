@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            border: 2px solid black;
+            animation: route 3s linear infinite;
+            /*开启3D空间*/
+            transform-style: preserve-3d;
+            /*设置景深*/
+            perspective: 500px;
+            /*设置透视点位置*/
+            /* perspective-origin: 150px 150px; */
+        }
+        .inner{
+            text-align: center;
+            line-height: 200px;
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(red,yellow,green);
+            opacity: 0.5;
+            transform: scale3d(1.5,2,2.5) rotateY(45deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            刀怒斩雪山雕,山豪迈在燃烧
+        </div>
+    </div>
+    
+</body>
+</html>

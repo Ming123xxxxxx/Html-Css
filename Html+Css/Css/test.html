@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            animation: changeweather 10s forwards;
+        }
+        .father{
+            position: absolute;
+            top: 800px;
+            left: 210px;
+        }
+        .strip{
+            height: 120px;
+            width: 1500px;
+            margin: auto;
+            background-color: aquamarine;
+        }
+        .load{
+            height: 100px;
+            width: 100px;
+            position:inherit;
+            left: 0px;
+            top: 10px;
+            animation: loading2 3s infinite;
+       
+        }
+        .mooning{
+            height: 100px;
+            width: 100px;
+            position:relative;
+            left: 0px;
+            top: 10px;
+            animation: tomooning 10s forwards;
+   
+        }
+
+        @keyframes loading1{
+            from{
+                width: 30px;
+            }
+            to{
+                width: 1500px;
+            }
+            
+        }
+
+        @keyframes loading2{
+            from{
+                left: 30px;
+            }
+            to{
+                left: 1400px;
+            }
+            
+        }
+
+        @keyframes tomooning {
+            from{
+                left: 30px;
+            }
+            to{
+                left: 1820px;
+            }
+        }
+
+        @keyframes changeweather {
+            0%{
+                background-color: aliceblue;
+            }
+            25%{
+                background-color: rgb(255, 214, 81);
+            }
+            50%{
+                background-color: rgb(173, 126, 25);
+            }
+            75%{
+                background-color:rgb(100, 70, 6);
+            }
+            100%{
+                background-color: rgb(0, 0, 0);
+            }
+        }
+
+    </style> 
+</head>
+<body>
+
+    <img class="mooning" src="./static/moon.png">
+    <div class="father">
+        <img class="load" src="./static/moon.png">
+        <img class="strip" src="./static/grassland.png">
+    </div>
+
+    
+</body>
+</html>

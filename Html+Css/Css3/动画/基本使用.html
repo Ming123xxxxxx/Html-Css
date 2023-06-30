@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+            margin:200px auto;
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            /*动画名字*/
+            animation-name: toright2;
+            /*动画时间*/
+            animation-duration: 3s;
+            /*动画延迟时间*/
+            animation-delay: 0.5s;
+
+        }
+
+        /*第一种方式: 定义一个动画(一组关键帧)*/
+        @keyframes toright {
+            /*第一帧*/
+            from{
+            }
+            /*最后一帧*/
+            to{
+                transform: translateX(900px);
+                background-color: greenyellow;
+            }
+        }
+
+        /*第二种方式*/
+        @keyframes toright2 {
+            0%{
+                transform: translateX(0px) scale(1) rotate(0deg);
+            }
+            30%{
+
+                transform: translateX(300px) scale(1.3) rotate(30deg);
+            }
+            66%{
+                transform: translateX(600px) scale(1.6) rotate(60deg);
+            }
+            100%{
+                transform: translateX(850px) scale(2) rotate(90deg);
+                background-color: greenyellow;
+                border-radius: 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

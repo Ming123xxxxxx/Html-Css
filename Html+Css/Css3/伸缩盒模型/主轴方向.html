@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container{
+            width: 1000px;
+            height: 800px;
+            background-color: gray;
+            margin: 50px auto;
+            /*将该元素变为伸缩容器(开启flex布局)*/
+            display: flex;
+
+            /*调整主轴方向 水平从左到右,默认*/
+            /* flex-direction: row; */
+
+            /*调整主轴方向 水平从右到左*/
+            /* flex-direction: row-reverse; */
+
+            /*调整主轴方向 垂直从上到下*/
+            /* flex-direction: column; */
+            
+            /*调整主轴方向 垂直从下到上*/
+            flex-direction: column-reverse;
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background-color: aqua;
+            border:1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>

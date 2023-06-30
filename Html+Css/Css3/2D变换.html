@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            border: 1px solid black;
+            animation: route 3s linear infinite;
+        }
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            /* transform: translateX(50px) translateY(50px); */
+            transform: translate(100px,100px);
+        }
+        .inner2{
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            transform: translate(-50px,-250px) scale(0.5,0.5);
+        }
+        .outer2{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            border: 1px solid black;
+            text-align: center;
+            ;line-height: 200px;
+            background-color: antiquewhite;
+            transform: skew(30deg,30deg);
+        }
+        @keyframes route {
+            0%{
+                transform: rotateZ(0deg);
+            }
+            25%{
+                transform: rotateZ(90deg);
+            }
+            50%{
+                transform: rotateZ(180deg);
+            }
+            75%{
+                transform: rotateZ(270deg);
+            }
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            
+        </div>
+        <div class="inner2">
+
+        </div>
+    </div>
+
+    <div class="outer2">
+        2d扭曲
+    </div>
+    
+</body>
+</html>

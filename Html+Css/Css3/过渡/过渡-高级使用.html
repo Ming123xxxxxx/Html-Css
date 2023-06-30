@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 1300px;
+            height: 900px;
+            border:1px solid black;
+            margin: auto;
+            
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            transition-property:all;
+            transition-duration: 2s;
+            /*过渡延迟*/
+            /* transition-delay: 1s; */
+        }
+        .outer:hover .box{
+            width: 1300px;
+        }
+        .box1{
+            background-color: antiquewhite;
+            transition-timing-function: esae;
+        }
+        .box2{
+            background-color: rgb(134, 102, 60);
+            transition-timing-function: linear;
+        }
+        .box3{
+            background-color: skyblue;
+              transition-timing-function: ease-in;
+        }
+        .box4{
+            background-color: black;
+            transition-timing-function: ease-out;
+        }
+        .box5{
+            background-color: blue;
+            transition-timing-function: ease-in-out;
+        }
+        .box6{
+            background-color: purple;
+            transition-timing-function: step-start;
+        }
+        .box7{
+            transition-timing-function: step-end;
+            background-color: green;
+        }
+        .box8{
+            background-color: greenyellow;
+            transition-timing-function: steps(20);
+        }
+        .box9{
+            background-color: yellow;
+            transition-timing-function: cubic-bezier(.72,1.54,.76,1.14);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box1 box">ease(慢->快->慢)</div>
+        <div class="box2 box">linear(匀速)</div>
+        <div class="box3 box">ease-in(慢->快)</div>
+        <div class="box4 box">ease-out(快->慢)</div>
+        <div class="box5 box">ease-in-out(慢->快->慢)</div>
+        <div class="box6 box">step-start(不考虑过渡时间,直接到终点)</div>
+        <div class="box7 box">step-end(考虑过渡时间,但无过渡效果,直接到达终点)</div>
+        <div class="box8 box">steps(value) (分步过渡,按value值进行过渡)</div>
+        <div class="box9 box">贝塞尔曲线</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--使用本地字体图标 方式二:需要先使用Link引入css样式-->
+    <link rel="stylesheet" href="./static/font/iconfont.css">
+
+    <!--使用在线字体图标 方式二:需要先使用Link引入css样式-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4127919_oejehzax27j.css">
+
+    <!--使用本地字体图标 方式三:需要先引入js-->
+    <script src="./static/font/iconfont.js"></script>
+
+    <!--使用在线字体图标 方式三:需要先引入js-->
+    <script src="//at.alicdn.com/t/c/font_4127919_oejehzax27j.js"></script>
+
+    <style>
+        /*使用自己的字体*/
+        @font-face {
+            font-family: "好看字体";
+            src: url(./static/字体.ttf);
+        }
+        div{
+            font-family: "好看字体";
+            margin: auto;
+            font-size: 50px;
+            margin:20px
+        }
+
+        /*使用本地字体图标 方式一*/
+        @font-face {
+            font-family: 'iconfont';
+            src: url('./static/font/iconfont.ttf?t=1687073690548') format('truetype');
+        }
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 40px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /*使用本地字体图标 方式三:接着加入css代码*/
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        /*使用在线字体图标 方式一:使用网络地址,无需下载*/
+        @font-face {
+            font-family: 'iconfontOnline';  /* Project id 4127919 */
+            src: url('//at.alicdn.com/t/c/font_4127919_oejehzax27j.woff2?t=1687075203760') format('woff2'),
+                url('//at.alicdn.com/t/c/font_4127919_oejehzax27j.woff?t=1687075203760') format('woff'),
+                url('//at.alicdn.com/t/c/font_4127919_oejehzax27j.ttf?t=1687075203760') format('truetype');
+        }
+        .iconfontOnline {
+            font-family: "iconfontOnline" !important;
+            font-size: 40px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        人之初,性本善,性相近,习相远
+    </div>
+
+    <div>
+        <h3>使用本体图标</h3>
+       方式一: <i class="iconfont">&#xe61d;</i><br>
+       方式二: <i class="iconfont icon-guanzhu"></i><br>
+         <!--方式三-->
+       方式三:
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-guanzhu1"></use>
+        </svg><br>
+    </div>
+
+    <div>
+        <h3>使用在线图标</h3>
+       方式一: <i class="iconfontOnline">&#xe61e;</i><br>
+       方式二: <i class="iconfontOnline icon-guanzhu"></i><br>
+       方式三:
+       <svg class="icon" aria-hidden="true">
+           <use xlink:href="#icon-map"></use>
+       </svg><br>
+    </div>
+
+ 
+    
+</body>
+</html>

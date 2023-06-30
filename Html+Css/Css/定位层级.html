@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .context{
+            margin: 100px;
+            height: 700px;
+        }
+
+        .context div{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .context div:first-child{
+            background-color: red;
+            position: fixed;
+        }
+
+        .context div:nth-child(2){
+            background-color: aqua;
+            position: absolute ;
+            left: 200px;
+            top: 200px;
+        }
+
+        .context div:nth-child(3){
+            background-color: antiquewhite;
+            position: relative;
+            left: 200px;
+            top: 200px;
+        }
+
+        .context div:nth-child(4){
+            background-color:blue;
+            position: sticky; 
+            left: 400px;    
+            top: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="context">
+
+        <div>固定定位</div>
+        <div>绝对定位</div>
+        <div>相对定位</div>
+        <div>粘性定位</div>
+    </div>
+    
+</body>
+</html>

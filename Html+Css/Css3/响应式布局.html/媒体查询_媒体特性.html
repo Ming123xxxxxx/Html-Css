@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        h1{
+            height: 200px;
+            background-color: gray;
+            text-align: center;
+            line-height: 200px;
+            font-size: 100px;
+        }
+
+        /*检测到视口宽度位>=800时等同于width-min:800,应用如下样式*/
+        @media(width>=800px){
+            h1{
+                color: greenyellow;
+            }
+        }
+
+         /*检测到视口宽度位<=600时等同于width-max:600,应用如下样式*/
+         @media(width<=600px){
+            h1{
+                color: rgb(29, 63, 218);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>你好啊!!!</h1>
+</body>
+</html>

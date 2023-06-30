@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--利用iframe嵌入一个网页-->
+    <!--frameborder:可写入0或1,0为无边框,1为有边框-->
+    <!-- <iframe src="https://www.bilibili.com" width="700" height="700" frameborder="1"></iframe> -->
+
+    <!--iframe的name和target配合使用从而嵌入href中对应的网站-->
+    <a href="https://www.bilibili.com" target="container">去B站</a> 
+    <a href="https://www.taobao.com" target="container">去购物</a> 
+    <a href="https://news.baidu.com" target="container">看新闻</a> 
+    <br>
+    <br>
+
+    <!--与表单的target配合使用，从而嵌入action中对应的网站-->
+    <form action="https://search.bilibili.com/" target="container">
+        <label for="key">关键字:</label>
+        <input type="text" name="keyword" id="key">
+        <input type="submit" value="去B站搜索">
+    </form>
+
+    <br>
+    <br>
+
+    <iframe name="container" width="700" height="700" frameborder="1"></iframe>
+
+</body>
+</html>

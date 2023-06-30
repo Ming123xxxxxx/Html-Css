@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:400px;
+            height:300px;
+            margin:auto;
+        }
+        div:first-child{
+            background-color: aqua;
+        }
+        div:nth-child(2){
+            position: absolute;
+            background-color: green;
+        }
+        div:nth-child(3){
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div contenteditable="true" spellcheck="true">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, exercitationem!
+    </div>
+    <div id="dra" draggable="true" ondragend="go(event)">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem libero fugiat dicta incidunt rerum repudiandae. Distinctio eveniet reprehenderit non ipsa?
+    </div>
+
+    <div hidden>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus perferendis eveniet, facilis architecto at corrupti nisi maxime culpa, vel voluptatum quia libero sequi iste, temporibus dicta. Ullam ab tenetur modi!
+    </div>
+
+    <script>
+        function go(e){
+            dra.style.left = e.x + "px"
+            dra.style.top = e.y + "px"
+        }
+    </script>
+</body>
+</html>

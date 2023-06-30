@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            border: 2px solid black;
+            animation: route 3s linear infinite;
+            /*开启3D空间*/
+            transform-style: preserve-3d;
+            /*设置景深*/
+            perspective: 500px;
+            /*设置透视点位置*/
+            /* perspective-origin: 150px 150px; */
+        }
+        .sign{
+            text-align: center;
+            line-height: 200px;
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(red,yellow,green);
+            animation: identifier 1s forwards;
+        }
+        .login{
+            text-align: center;
+            line-height: 200px;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: -200px;
+            opacity: 0;
+            background-image: linear-gradient(to right,green,yellow,red);
+            animation: identifier2 1s 0.1s forwards;
+            transform: rotate3d(1,1,1,45deg);
+        }
+        @keyframes identifier {
+            from{
+                opacity: 1;
+                transform: translateX(200px);
+            }
+            to{
+                opacity: 0;
+                display: none;
+                transform: translateX(0px);
+            }
+        }
+        @keyframes identifier2 {
+            from{
+                opacity: 0;
+                display: none;
+            }
+            to{
+                opacity: 1;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="sign">
+            注册
+        </div>
+        <div class="login">
+            登录
+        </div>
+    </div>
+    
+</body>
+</html>

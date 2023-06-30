@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            height: 2000px;
+        }
+        *{
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .head div{
+            background-color:#dedede;
+            float: left;
+            line-height: 100px;
+            margin:10px;
+        }
+        .head::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .head div:nth-child(2){
+            width: 1000px;
+            height: 100px;
+        }
+        .head div:first-child,.head div:nth-child(3){
+            width: 420px;
+            height: 100px;
+        }
+        .head div:last-child{
+            width: 1880px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .body::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .body div{
+            border: 1px solid black;
+            line-height: 300px;
+        }
+
+        .body .le,.body .ri{
+            border: 0px;
+        }
+
+        .body .le div,.body .ri div{
+            margin: 10px;
+        }
+
+        .le{
+            width: 1550px;
+            float: left;
+        }
+
+        .le div:first-child,.le div:nth-child(2){
+            width: 750px;
+            height: 300px;
+            float: left;
+        }
+
+        .le div:nth-child(3),.le div:nth-child(4),.le div:nth-child(5),.le div:nth-child(6){
+            width: 365px;
+            height: 300px;
+            float: left;
+        }
+
+        .ri{
+            width: 330px;
+            float: left;
+        }
+
+        .ri div{
+            width: 330px;
+            height: 200px;
+            line-height: 200px;
+        }
+
+        .headfa{
+            width: 1900px;
+            margin: auto;
+        }
+
+        .bodyfa{
+            width: 1900px;
+            margin: auto;
+        }
+
+        .navigation_bar{
+            width: 70px;
+            position: fixed;
+            top: 100px;
+            right: 100px;
+            font-size: 20px;
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        .navigation_bar div{
+            width: 50px;
+            height: 70px;
+            line-height: 35px;
+            background-color: aqua;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .navigation_bar div:nth-child(4),.navigation_bar div:nth-child(5){
+            line-height: 70px;
+        }
+        .navigation_bar div:hover{
+            background-color: aliceblue;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+   <div class="headfa">
+        <div class="head">
+
+            <div>logo</div>
+            <div>banner1</div>
+            <div>banner2</div>
+            <div>菜单</div>
+        </div>
+   </div>
+
+    <div class="bodyfa">
+        <div class="body">
+            <div class="le">
+                <div>栏目一</div>
+                <div>栏目二</div>
+                <div>栏目三</div>
+                <div>栏目四</div>
+                <div>栏目五</div>
+                <div>栏目六</div>
+            </div>
+            <div class="ri">
+                <div>栏目七</div>
+                <div>栏目八</div>
+                <div>栏目九</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation_bar">
+        <div>京东秒杀</div>
+        <div>频道广场</div>
+        <div>为你推荐</div>
+        <div>客服</div>
+        <div>反馈</div>
+        <a href="#" style="text-decoration:none;color:black;"><div>回到顶部</div></a>
+
+    </body>
+</html>

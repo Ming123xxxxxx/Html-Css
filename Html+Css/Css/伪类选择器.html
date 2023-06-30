@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*兄弟选择器*/
+        /* 选择ul相邻的div */
+        ul+div{
+            background-color: red;
+        }
+
+        /* 选择input以下的所有div */
+        input~div{
+            background-color:rgb(88, 91, 92);
+            height: 500px;
+        }
+
+        /* 后代选择器 */
+        ul li{
+            font-size: 20px;
+            color: rgb(115, 175, 175);
+        }
+
+        /* 子代选择器 */
+        li>a{
+            text-decoration: none;
+        }
+
+        /* 动态伪类选择器 */
+        li>a:link{
+            color:black;
+        }
+
+        li>a:visited{
+            color:blue;
+        }
+
+        li>a:hover{
+            color:antiquewhite;
+        }
+
+        li>a:active{
+            color:red;
+        }
+
+        /* 并集选择器 */
+        .watchTv,#doHomework{
+            border: 2px solid orange;
+        }
+
+        /* 交集选择器 */
+        li.tbaidu{
+            background-color: blanchedalmond;
+        }
+
+        /* 结构伪类选择器 */
+        li:first-child{
+            background-color: aqua;
+        }
+
+        /* UI伪类选择器 */
+        input:checked{
+            width: 50px;
+            height: 50px;
+        }
+        /* 选择的是被禁用的input */
+        input:disabled{
+            background-color: antiquewhite;
+        }
+        /* 选择的是被可用的input */
+        input:enabled{
+            background-color: green;
+        }
+
+        /* 目标伪类选择器 */
+        input~div:target{
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="#one">看第一个</a>
+    <a href="#two">看第二个</a>
+    <a href="#three">看第三个</a>
+    <a href="#four">看第四个</a>
+    <br>
+
+    <ul>
+        <li>上海</li>
+        <li>北京</li>
+        <li class="tbaidu">天津</li>
+        <li>
+            <a  href="https://www.baidu.com" target="_blank">去百度</a>
+        </li>
+    </ul>
+    <div class="watchTv">看电视</div>
+    <div id="doHomework">写作业</div>
+    
+    <input type="checkbox">
+    <input type="radio" name="sex" value="male">
+    <input type="radio" name="sex" value="female">
+    <input type="text">
+    <input type="text" disabled>
+    <br>
+    <br>
+
+    <div id="one"></div>
+    <br>
+    <div id="two"></div>
+    <br>
+    <div id="three"></div>
+    <br>
+    <div id="four"></div>
+    <br>
+
+</body>
+</html>
